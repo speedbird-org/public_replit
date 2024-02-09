@@ -16,9 +16,9 @@ const dataSchema = new Schema({
     }
 });
 
-const BaseMongooseModel = mongoose.model('BaseGpsDataMin', dataSchema);
+const BaseMongooseModel = mongoose.model('BaseGpsData2', dataSchema);
 
 
-export default class GpsDataMinModel extends BaseMongooseModel {
+export default class GpsDataModel2 extends BaseMongooseModel {
 
 }

@@ -16,9 +16,9 @@ const dataSchema = new Schema({
     }
 });
 
-const BaseMongooseModel = mongoose.model('BaseGpsDataHour', dataSchema);
+const BaseMongooseModel = mongoose.model('BaseGpsData3', dataSchema);
 
 
-export default class GpsDataHourModel extends BaseMongooseModel {
+export default class GpsDataModel3 extends BaseMongooseModel {
 
 }
