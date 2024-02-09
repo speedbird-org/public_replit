@@ -3,9 +3,9 @@ import GpsDataControlModel from "./gpsdata-control";
 import GpsDataModel3 from "./gpsdata_hour";
 import GpsDataModel2 from "./gpsdata_min";
 
-const deviceId = "2";
+const deviceId = "1";
 //Feb 1 to Feb 10
-const startDate = "2024-02-04T10:30:00.177Z";
+const startDate = "2024-02-09T04:30:00.177Z";
 const limit = 1000;
 
 async function readGpsDataModel1() {

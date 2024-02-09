@@ -37,12 +37,10 @@ export async function populateRandomDataToDb() {
         let res = await Promise.all([
             GpsDataModel1.insertMany(list),
             GpsDataControlModel.insertMany(list),
-            GpsDataModel2.insertMany(list),
-            GpsDataModel3.insertMany(list),
+            // GpsDataModel2.insertMany(list),
+            // GpsDataModel3.insertMany(list),
 
         ]);
-
-        // list = await GpsDataControlModel.find().lean();
         console.log(`Date: ${new Date().toISOString()}  Inserted ${res[0].length} docs. index: ${index}`);
     }
 
