@@ -1,4 +1,4 @@
-import GpsDataModel from "./gpsdata";
+import GpsDataSecondsModel from "./gpsdata";
 import GpsDataControlModel from "./gpsdata-control";
 import GpsDataHourModel from "./gpsdata_hour";
 import GpsDataMinModel from "./gpsdata_min";
@@ -35,7 +35,7 @@ export async function populateRandomDataToDb() {
 
         let list = generateRandomData(1000);
         let res = await Promise.all([
-            GpsDataModel.insertMany(list),
+            GpsDataSecondsModel.insertMany(list),
             GpsDataControlModel.insertMany(list),
             GpsDataMinModel.insertMany(list),
             GpsDataHourModel.insertMany(list),
