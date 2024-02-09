@@ -8,17 +8,17 @@ const dataSchema = new Schema({
     gpsDate: Date,
 
 }, {
-    collection: "gpsdata",
+    collection: "gpsdata_hour",
     timeseries: {
         timeField: 'gpsDate',
         metaField: 'deviceId',
-        granularity: 'seconds',
+        granularity: 'hours',
     }
 });
 
-const BaseMongooseModel = mongoose.model('BaseGpsData', dataSchema);
+const BaseMongooseModel = mongoose.model('BaseGpsDataHour', dataSchema);
 
 
-export default class GpsDataModel extends BaseMongooseModel {
+export default class GpsDataHourModel extends BaseMongooseModel {
 
 }

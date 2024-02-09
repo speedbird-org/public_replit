@@ -1,5 +1,7 @@
 import GpsDataModel from "./gpsdata";
 import GpsDataControlModel from "./gpsdata-control";
+import GpsDataHourModel from "./gpsdata_hour";
+import GpsDataMinModel from "./gpsdata_min";
 
 function getRandomWholeNumber(min: number, max: number): number {
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -35,6 +37,9 @@ export async function populateRandomDataToDb() {
         let res = await Promise.all([
             GpsDataModel.insertMany(list),
             GpsDataControlModel.insertMany(list),
+            GpsDataMinModel.insertMany(list),
+            GpsDataHourModel.insertMany(list),
+
         ]);
 
         // list = await GpsDataControlModel.find().lean();

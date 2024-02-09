@@ -23,7 +23,7 @@ async function readGpsDataOld() {
 
 export async function benchmarkReadOperation() {
     
-    // readGpsDataOld();
+    readGpsDataOld();
     readGpsDataNew();
     
     // readGpsDataNew();

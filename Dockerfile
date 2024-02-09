@@ -1,4 +1,3 @@
-# FROM node:18.16.1
 FROM node:lts-buster-slim
 RUN chown -R node /usr/local/lib/node_modules
 
@@ -9,5 +8,3 @@ COPY --chown=node:node package*.json ./
 
 RUN npm install
 COPY --chown=node:node . .
-
-# RUN npm run build

@@ -8,17 +8,17 @@ const dataSchema = new Schema({
     gpsDate: Date,
 
 }, {
-    collection: "gpsdata",
+    collection: "gpsdata_min",
     timeseries: {
         timeField: 'gpsDate',
         metaField: 'deviceId',
-        granularity: 'seconds',
+        granularity: 'minutes',
     }
 });
 
-const BaseMongooseModel = mongoose.model('BaseGpsData', dataSchema);
+const BaseMongooseModel = mongoose.model('BaseGpsDataMin', dataSchema);
 
 
-export default class GpsDataModel extends BaseMongooseModel {
+export default class GpsDataMinModel extends BaseMongooseModel {
 
 }

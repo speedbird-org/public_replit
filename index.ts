@@ -2,6 +2,9 @@ import mongoose from "mongoose";
 
 import "./gpsdata";
 import "./gpsdata-control";
+import "./gpsdata_min";
+import "./gpsdata_hour";
+
 import { populateRandomDataToDb } from "./testInsert";
 import { benchmarkReadOperation } from "./testRead";
 
