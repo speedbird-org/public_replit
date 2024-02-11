@@ -4,6 +4,7 @@ import "./gpsdata";
 import "./gpsdata-control";
 import "./gpsdata_min";
 import "./gpsdata_hour";
+import "./gpsdata-4";
 import "./gpsdata-5";
 
 import { populateRandomDataToDb, testInsert } from "./testInsert";
