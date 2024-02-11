@@ -5,7 +5,7 @@ import GpsDataControlModel from "./gpsdata-control";
 import GpsDataModel3 from "./gpsdata_hour";
 import GpsDataModel2 from "./gpsdata_min";
 
-const deviceId = "100";
+const deviceId = "50";
 //Feb 1 to Feb 10
 const startDate = "2024-02-11T12:00:00.881Z";
 const limit = 1000;
