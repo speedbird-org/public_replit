@@ -11,6 +11,7 @@ import "./gpsdata-6";
 
 import { populateRandomDataToDb, testInsert } from "./testInsert";
 import { benchmarkReadOperation } from "./testRead";
+import { populateOrderedDataToDb } from "./testInsert2";
 
 
 console.log(`${new Date().toISOString()} Test server started...`);
@@ -29,7 +30,8 @@ mongoose.connect(mongoDbUrl, mongoOptions).catch((err) => {
 });
 
 
+populateOrderedDataToDb();
 // populateRandomDataToDb();
-benchmarkReadOperation();
+// benchmarkReadOperation();
 
 // testInsert();

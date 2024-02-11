@@ -2,7 +2,7 @@ version: "3"
 services:
   ftest:
     image: "ftesti"
-    command:  "npx ts-node index.ts"
+    # command:  "npx ts-node index.ts"
     restart: always
     container_name: "ft"
     logging:

@@ -8,3 +8,5 @@ COPY --chown=node:node package*.json ./
 
 RUN npm install
 COPY --chown=node:node . .
+
+CMD ["npx", "ts-node","index.ts"]
