@@ -1,6 +1,7 @@
 import GpsDataModel1 from "./gpsdata";
 import GpsDataModel4 from "./gpsdata-4";
 import GpsDataModel5 from "./gpsdata-5";
+import GpsDataModel6 from "./gpsdata-6";
 import GpsDataControlModel from "./gpsdata-control";
 import GpsDataModel3 from "./gpsdata_hour";
 import GpsDataModel2 from "./gpsdata_min";
@@ -42,8 +43,9 @@ export async function populateRandomDataToDb() {
             // GpsDataModel2.insertMany(list),
             // GpsDataModel3.insertMany(list),
 
-            GpsDataModel5.insertMany(list),
+            // GpsDataModel5.insertMany(list),
 
+            GpsDataModel6.insertMany(list),
 
         ]);
         console.log(`Date: ${new Date().toISOString()}  Inserted ${res[0].length} docs. index: ${index}`);

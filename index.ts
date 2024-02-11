@@ -6,6 +6,8 @@ import "./gpsdata_min";
 import "./gpsdata_hour";
 import "./gpsdata-4";
 import "./gpsdata-5";
+import "./gpsdata-6";
+
 
 import { populateRandomDataToDb, testInsert } from "./testInsert";
 import { benchmarkReadOperation } from "./testRead";
@@ -27,7 +29,7 @@ mongoose.connect(mongoDbUrl, mongoOptions).catch((err) => {
 });
 
 
-// populateRandomDataToDb();
-benchmarkReadOperation();
+populateRandomDataToDb();
+// benchmarkReadOperation();
 
 // testInsert();
