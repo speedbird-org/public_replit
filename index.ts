@@ -27,7 +27,7 @@ mongoose.connect(mongoDbUrl, mongoOptions).catch((err) => {
 });
 
 
-populateRandomDataToDb();
-// benchmarkReadOperation();
+// populateRandomDataToDb();
+benchmarkReadOperation();
 
 // testInsert();

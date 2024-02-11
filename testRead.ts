@@ -1,4 +1,5 @@
 import GpsDataModel1 from "./gpsdata";
+import GpsDataModel5 from "./gpsdata-5";
 import GpsDataControlModel from "./gpsdata-control";
 import GpsDataModel3 from "./gpsdata_hour";
 import GpsDataModel2 from "./gpsdata_min";
@@ -29,6 +30,13 @@ async function readGpsDataModel3() {
     console.log(`Elapsed in Model 3: ${et - st}`)
 }
 
+async function readGpsDataModel5() {
+    const st = Date.now();
+    await GpsDataModel5.find({ deviceId: deviceId, gpsDate: { $gte: startDate } }, {}, { limit: limit, sort: { gpsDate: 1 } }).lean();
+    const et = Date.now();
+    console.log(`Elapsed in Model 5: ${et - st}`)
+}
+
 
 async function readGpsDataOld() {
     const st = Date.now();
@@ -43,6 +51,7 @@ export async function benchmarkReadOperation() {
     readGpsDataModel1();
     readGpsDataModel2();
     readGpsDataModel3();
+    readGpsDataModel5();
 
     // readGpsDataNew();
 
