@@ -50,6 +50,7 @@ export async function populateOrderedDataToDb() {
         console.log(`Date: ${new Date().toISOString()}  Inserted ${res[0].length} docs. index: ${index}`);
     }
 
+    console.log(`ALL OPS COMPLETED !!!!`);
 }
 
 
