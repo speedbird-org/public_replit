@@ -5,16 +5,16 @@ import GpsDataControlModel from "./gpsdata-control";
 import GpsDataModel3 from "./gpsdata_hour";
 import GpsDataModel2 from "./gpsdata_min";
 
-const deviceId = "1";
+const deviceId = "100";
 //Feb 1 to Feb 10
-const startDate = "2024-02-03T06:30:00.177Z";
+const startDate = "2024-02-11T12:00:00.881Z";
 const limit = 1000;
 
 async function readGpsDataModel1() {
     const st = Date.now();
-    await GpsDataModel1.find({ deviceId: deviceId, gpsDate: { $gte: startDate } }, {}, { limit: limit, sort: { gpsDate: 1 } }).lean();
+    const docs = await GpsDataModel1.find({ deviceId: deviceId, gpsDate: { $gte: startDate } }, {}, { limit: limit, sort: { gpsDate: 1 } }).lean();
     const et = Date.now();
-    console.log(`Elapsed in Model 1: ${et - st}`)
+    console.log(`Elapsed in Model 1: ${et - st}  Count: ${docs.length}`);
 }
 
 async function readGpsDataModel2() {
@@ -48,20 +48,18 @@ async function readGpsDataModel6() {
 
 async function readGpsDataOld() {
     const st = Date.now();
-    await GpsDataControlModel.find({ deviceId: deviceId, gpsDate: { $gte: startDate } }, {}, { limit: limit, sort: { gpsDate: 1 } }).lean();
+    const docs = await GpsDataControlModel.find({ deviceId: deviceId, gpsDate: { $gte: startDate } }, {}, { limit: limit, sort: { gpsDate: 1 } }).lean();
     const et = Date.now();
-    console.log(`Elapsed in old Model: ${et - st}`)
+    console.log(`Elapsed in old Model: ${et - st} Count: ${docs.length}`);
 }
 
 export async function benchmarkReadOperation() {
 
     readGpsDataOld();
     readGpsDataModel1();
-    // readGpsDataModel2();
-    // readGpsDataModel3();
-    readGpsDataModel5();
-    readGpsDataModel6();
 
-    // readGpsDataNew();
+    // readGpsDataModel5();
+    // readGpsDataModel6();
+
 
 }

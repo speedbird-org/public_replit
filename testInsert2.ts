@@ -36,7 +36,7 @@ function generateRandomData(numEntries: number): any {
 
 export async function populateOrderedDataToDb() {
 
-    for (let index = 1; index <= 10000; index++) {
+    for (let index = 1; index <= 100; index++) {
 
         let list = generateRandomData(1000);
         let res = await Promise.all([
