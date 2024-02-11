@@ -24,8 +24,8 @@ const BaseMongooseModel = mongoose.model('BaseGpsData4', dataSchema);
 
 
 export default class GpsDataModel4 extends BaseMongooseModel {
-    static async smartInsert(docs) {
-        
+    static async smartInsert(docs: any[]) {
+
         for (let doc of docs) {
             const startDate = moment(doc.gpsDate).utcOffset(0).startOf('minute').toDate();
             console.log(startDate);
