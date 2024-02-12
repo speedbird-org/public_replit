@@ -25,7 +25,7 @@ function generateRandomData(numEntries: number): any {
 
     for (let i = 0; i < numEntries; i++) {
         list.push({
-            deviceId: getRandomWholeNumber(1, 50000),
+            deviceId: getRandomWholeNumber(1, 100),
             gpsDate: new Date(now + i * 5),
             lat: getRandomNumber(11.0, 11.2),
             lon: getRandomNumber(77.4, 77.5),
