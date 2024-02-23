@@ -36,5 +36,4 @@ mongoose.connect(mongoDbUrl, mongoOptions).catch((err) => {
 
 // testInsert();
 
-
 // testNanAsInsert();

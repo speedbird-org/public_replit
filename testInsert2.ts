@@ -78,7 +78,7 @@ export async function testNanAsInsert() {
     const docs = await GpsDataControlModel.insertMany([{
         deviceId: "4",
         gpsDate: new Date(),
-        lat: 7/0,
+        lat: parseInt(""),
         lon: 77,
     }]);
     console.log(docs);
