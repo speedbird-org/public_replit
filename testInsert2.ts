@@ -71,6 +71,15 @@ export async function testInsert() {
         ]);
         console.log(`Date: ${new Date().toISOString()}  Inserted ${res[0]?.length} docs. index: ${index}`);
     }
-
 }
 
+
+export async function testNanAsInsert() {
+    const docs = await GpsDataControlModel.insertMany([{
+        deviceId: "4",
+        gpsDate: new Date(),
+        lat: 7/0,
+        lon: 77,
+    }]);
+    console.log(docs);
+}
